@@ -102,6 +102,7 @@ function renderResults(rows) {
       "bg-white rounded-2xl shadow-sm p-5 border border-slate-200";
 
     card.innerHTML = `
+      <img src="https://tmcms-docs.uspto.gov/cases/${r.sn}/mark/large.png">
       <h2 class="text-lg font-semibold mb-1">${r.mark || ""}</h2>
       <p class="text-sm text-slate-500 mb-2">
         Serial: ${r.sn || ""} • Class ${r.pc || ""}
