@@ -9,26 +9,43 @@
 
   <!-- Hero Section -->
   <div class="relative flex flex-col items-center justify-center w-full px-5 md:px-10 py-20">
-    
+
+    <!-- Hero Heading -->
     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-center leading-snug max-w-3xl mb-6">
-      Search over <span class="text-blue-600 relative whitespace-nowrap">12 million+</span> Trademarks for free
+      Search over 
+      <span class="text-blue-600 relative whitespace-nowrap">
+        20 million+
+      </span> Trademarks for free
     </h1>
 
     <p class="text-center text-slate-600 sm:text-lg mb-10 max-w-xl">
-      World's most trusted name in Trademark Registration. Trademark filing starts at $499*. File Today!
+      World's most trusted name in Trademark Registration. 
+      <br>Trademark filing starts at $49*. File Today!
     </p>
 
     <!-- Search Bar -->
-    <div class="w-full max-w-3xl relative flex items-center">
-      <input
-        id="searchInput"
-        type="search"
-        placeholder="Search trademark here"
-        class="flex-1 px-5 py-4 rounded-2xl border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg"
-      />
+    <div class="w-full max-w-3xl flex items-center gap-3 relative">
+      
+      <!-- Input Container with Icon -->
+      <div class="relative flex-1">
+        <!-- Icon -->
+        <svg class="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+
+        <!-- Input -->
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search trademark here"
+          class="w-full pl-12 pr-6 py-4 rounded-2xl border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg"
+        />
+      </div>
+
+      <!-- Search Button -->
       <button
         id="searchBtn"
-        class="ml-3 px-6 py-4 rounded-2xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
+        class="px-6 py-4 rounded-2xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition text-lg flex items-center justify-center"
       >
         Search
       </button>
@@ -36,6 +53,7 @@
 
     <div id="status" class="mt-4 text-sm text-slate-500"></div>
   </div>
+
 
   <!-- Results Grid -->
   <div class="max-w-6xl mx-auto px-5 md:px-10 mb-20">
