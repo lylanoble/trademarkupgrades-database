@@ -115,24 +115,33 @@ function renderResults(rows) {
           ${r.mark || ""}
         </h2>
 
+        <!-- Owner Info -->
+        <div class="text-xs text-slate-400">
+          Owned By : ${r.owner || ""}
+        </div>
+
         <!-- Serial and Class -->
         <p class="text-sm text-slate-500 mb-2 truncate">
-          Serial: ${r.sn || ""} • Class ${r.pc || ""}
+          Serial: ${r.sn || ""}
         </p>
 
         <!-- Description / GS -->
         <p class="text-sm mb-3 line-clamp-3">
           ${r.gs || ""}
         </p>
+        <p class="text-sm text-slate-500 mb-2 truncate">
+          Class ${r.pc || ""}
+        </p>
 
-        <!-- Owner Info -->
+        <!-- Filing Date -->
         <div class="text-xs text-slate-400 mt-auto">
-          Owner: ${r.owner || ""}<br/>
-          ${r.address || ""}
+          Filed : ${r.fd || ""}
         </div>
+
       </div>
     `;
 
     resultsEl.appendChild(card);
   }
 }
+
