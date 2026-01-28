@@ -95,53 +95,68 @@ async function loadChunk(index) {
   }
 }
 
+function formatDate(yyyymmdd) {
+  if (!yyyymmdd || yyyymmdd.length !== 8) return "";
+  const y = yyyymmdd.slice(0, 4);
+  const m = yyyymmdd.slice(4, 6);
+  const d = yyyymmdd.slice(6, 8);
+  return `${d}-${m}-${y}`; // or `${y}-${m}-${d}`
+}
+
 function renderResults(rows) {
   for (const r of rows) {
     const card = document.createElement("div");
     card.className =
       "bg-white rounded-2xl shadow-sm p-5 border border-slate-200";
 
+    const filedDate = formatDate(r.fd);
+    
     card.innerHTML = `
-      <div class="flex flex-col h-full">
-        <!-- Image container to center and crop -->
-        <div class="flex justify-center items-center h-48 mb-3 overflow-hidden bg-slate-100 rounded-xl">
-          <img src="https://tmcms-docs.uspto.gov/cases/${r.sn}/mark/large.png" 
-              class="object-contain h-full w-full" 
-              alt="${r.mark || 'Trademark'}">
+      <div class="flex flex-col h-full rounded-2xl border border-slate-200 bg-white p-4 hover:shadow-lg transition-shadow">
+    
+        <!-- Image -->
+        <div class="flex justify-center items-center h-48 mb-4 overflow-hidden bg-slate-100 rounded-xl">
+          <img 
+            src="https://tmcms-docs.uspto.gov/cases/${r.sn}/mark/large.png"
+            class="object-contain h-full w-full"
+            alt="${r.mark || 'Trademark'}"
+            loading="lazy"
+          >
         </div>
-
+    
         <!-- Mark Name -->
-        <h2 class="text-lg font-semibold mb-1 truncate" title="${r.mark || ''}">
-          ${r.mark || ""}
+        <h2 class="text-lg font-semibold text-slate-900 mb-1 truncate" title="${r.mark || ''}">
+          ${r.mark || "—"}
         </h2>
-
-        <!-- Owner Info -->
-        <div class="text-xs text-slate-400">
-          Owned By : ${r.owner || ""}
+    
+        <!-- Owner -->
+        <p class="text-xs text-slate-500 mb-2 truncate">
+          Owned by: ${r.owner || "—"}
+        </p>
+    
+        <!-- Serial -->
+        <p class="text-xs text-slate-400 mb-3 truncate">
+          Serial: ${r.sn || "—"}
+        </p>
+    
+        <!-- Goods / Services -->
+        <p class="text-sm text-slate-700 mb-4 line-clamp-3">
+          ${r.gs || "—"}
+        </p>
+    
+        <!-- Bottom meta -->
+        <div class="mt-auto pt-3 border-t border-slate-100">
+          <div class="flex items-center justify-between text-xs text-slate-500">
+            <span>Class ${r.pc || "—"}</span>
+            <span>Filed: ${filedDate || "—"}</span>
+          </div>
         </div>
-
-        <!-- Serial and Class -->
-        <p class="text-sm text-slate-500 mb-2 truncate">
-          Serial: ${r.sn || ""}
-        </p>
-
-        <!-- Description / GS -->
-        <p class="text-sm mb-3 line-clamp-3">
-          ${r.gs || ""}
-        </p>
-        <p class="text-sm text-slate-500 mb-2 truncate">
-          Class ${r.pc || ""}
-        </p>
-
-        <!-- Filing Date -->
-        <div class="text-xs text-slate-400 mt-auto">
-          Filed : ${r.fd || ""}
-        </div>
-
+    
       </div>
     `;
 
     resultsEl.appendChild(card);
   }
 }
+
 
