@@ -102,19 +102,34 @@ function renderResults(rows) {
       "bg-white rounded-2xl shadow-sm p-5 border border-slate-200";
 
     card.innerHTML = `
-      <img src="https://tmcms-docs.uspto.gov/cases/${r.sn}/mark/large.png">
-      <h2 class="text-lg font-semibold mb-1">${r.mark || ""}</h2>
-      <p class="text-sm text-slate-500 mb-2">
-        Serial: ${r.sn || ""} • Class ${r.pc || ""}
-      </p>
+      <div class="flex flex-col h-full">
+        <!-- Image container to center and crop -->
+        <div class="flex justify-center items-center h-48 mb-3 overflow-hidden bg-slate-100 rounded-xl">
+          <img src="https://tmcms-docs.uspto.gov/cases/${r.sn}/mark/large.png" 
+              class="object-contain h-full w-full" 
+              alt="${r.mark || 'Trademark'}">
+        </div>
 
-      <p class="text-sm mb-3 line-clamp-3">
-        ${r.gs || ""}
-      </p>
+        <!-- Mark Name -->
+        <h2 class="text-lg font-semibold mb-1 truncate" title="${r.mark || ''}">
+          ${r.mark || ""}
+        </h2>
 
-      <div class="text-xs text-slate-400">
-        Owner: ${r.owner || ""}<br/>
-        ${r.address || ""}
+        <!-- Serial and Class -->
+        <p class="text-sm text-slate-500 mb-2 truncate">
+          Serial: ${r.sn || ""} • Class ${r.pc || ""}
+        </p>
+
+        <!-- Description / GS -->
+        <p class="text-sm mb-3 line-clamp-3">
+          ${r.gs || ""}
+        </p>
+
+        <!-- Owner Info -->
+        <div class="text-xs text-slate-400 mt-auto">
+          Owner: ${r.owner || ""}<br/>
+          ${r.address || ""}
+        </div>
       </div>
     `;
 
