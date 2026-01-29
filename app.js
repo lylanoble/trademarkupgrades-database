@@ -131,12 +131,12 @@ function renderResults(rows) {
     
         <!-- Owner -->
         <p class="text-xs text-slate-500 mb-2 truncate">
-          Owned by: ${r.owner || "—"}
+          Owned by <storng> ${r.owner || "—"} </storng>
         </p>
     
         <!-- Serial -->
         <p class="text-xs text-slate-400 mb-3 truncate">
-          Serial: ${r.sn || "—"}
+          Serial No # <storng> ${r.sn || "—"} </storng>
         </p>
     
         <!-- Goods / Services -->
@@ -147,8 +147,8 @@ function renderResults(rows) {
         <!-- Bottom meta -->
         <div class="mt-auto pt-3 border-t border-slate-100">
           <div class="flex items-center justify-between text-xs text-slate-500">
-            <span>Class ${r.pc || "—"}</span>
-            <span>Filed: ${filedDate || "—"}</span>
+            <span>Class <storng> ${r.pc || "—"} </storng> </span>
+            <span>Filed on <strong> ${filedDate || "—"} </storng> </span>
           </div>
         </div>
     
@@ -158,6 +158,7 @@ function renderResults(rows) {
     resultsEl.appendChild(card);
   }
 }
+
 
 
 
