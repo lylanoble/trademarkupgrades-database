@@ -140,7 +140,7 @@ function renderResults(rows) {
         </p>
     
         <!-- Goods / Services -->
-        <p class="text-sm text-slate-700 mb-4 line-clamp-3 mb-auto">
+        <p class="text-sm text-slate-700 line-clamp-3 mb-auto">
           ${r.gs || "—"}
         </p>
     
@@ -158,6 +158,7 @@ function renderResults(rows) {
     resultsEl.appendChild(card);
   }
 }
+
 
 
 
