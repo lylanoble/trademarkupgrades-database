@@ -105,51 +105,51 @@ function formatDate(yyyymmdd) {
 
 function renderResults(rows) {
   for (const r of rows) {
-    const card = document.createElement("div");
-    card.className =
-      "bg-white rounded-2xl shadow-sm p-5 border border-slate-200 hover:shadow-lg transition-shadow flex flex-col";
+const card = document.createElement("div");
+card.className =
+  "bg-white rounded-2xl shadow-sm p-5 border border-slate-200 hover:shadow-lg transition-shadow flex flex-col";
 
-    const filedDate = formatDate(r.fd);
+const filedDate = formatDate(r.fd);
 
-    card.innerHTML = `
-      <!-- Image -->
-      <div class="flex justify-center items-center h-48 mb-4 overflow-hidden bg-slate-100 rounded-xl">
-        <img 
-          src="https://tmcms-docs.uspto.gov/cases/${r.sn}/mark/large.png"
-          class="object-contain h-full w-full"
-          alt="${r.mark || 'Trademark'}"
-          loading="lazy"
-        >
-      </div>
+card.innerHTML = `
+  <!-- Image -->
+  <div class="flex justify-center items-center h-48 mb-4 overflow-hidden bg-slate-100 rounded-xl">
+    <img 
+      src="https://tmcms-docs.uspto.gov/cases/${r.sn}/mark/large.png"
+      class="object-contain h-full w-full"
+      alt="${r.mark || 'Trademark'}"
+      loading="lazy"
+    >
+  </div>
 
-      <!-- Mark Name -->
-      <h2 class="text-lg font-semibold text-slate-900 mb-1 truncate" title="${r.mark || ''}">
-        ${r.mark || "—"}
-      </h2>
+  <!-- Mark Name -->
+  <h2 class="text-lg font-semibold text-slate-900 mb-1 truncate" title="${r.mark || ''}">
+    ${r.mark || "—"}
+  </h2>
 
-      <!-- Owner -->
-      <p class="text-xs text-slate-500 mb-2 truncate">
-        Owned by <strong>${r.owner || "—"}</strong>
-      </p>
+  <!-- Owner -->
+  <p class="text-xs text-slate-500 mb-2 truncate">
+    Owned by <strong>${r.owner || "—"}</strong>
+  </p>
 
-      <!-- Serial -->
-      <p class="text-xs text-slate-400 mb-3 truncate">
-        Serial No # <strong>${r.sn || "—"}</strong>
-      </p>
+  <!-- Serial -->
+  <p class="text-xs text-slate-400 mb-3 truncate">
+    Serial No # <strong>${r.sn || "—"}</strong>
+  </p>
 
-      <!-- Goods / Services -->
-      <p class="text-sm text-slate-700 line-clamp-3 mb-3">
-        ${r.gs || "—"}
-      </p>
+  <!-- Goods / Services -->
+  <p class="text-sm text-slate-700 line-clamp-3 mb-3">
+    ${r.gs || "—"}
+  </p>
 
-      <!-- Bottom meta (sticks to bottom) -->
-      <div class="mt-auto pt-3 border-t border-slate-100">
-        <div class="flex items-center justify-between text-xs text-slate-500">
-          <span>Class <strong>${r.pc || "—"}</strong></span>
-          <span>Filed on <strong>${filedDate || "—"}</strong></span>
-        </div>
-      </div>
-    `;
+  <!-- Bottom meta (sticks to bottom) -->
+  <div class="mt-auto pt-3 border-t border-slate-100">
+    <div class="flex items-center justify-between text-xs text-slate-500">
+      <span>Class <strong>${r.pc || "—"}</strong></span>
+      <span>Filed on <strong>${filedDate || "—"}</strong></span>
+    </div>
+  </div>
+`;
 
     resultsEl.appendChild(card);
   }
