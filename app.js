@@ -107,12 +107,12 @@ function renderResults(rows) {
   for (const r of rows) {
     const card = document.createElement("div");
     card.className =
-      "bg-white rounded-2xl shadow-sm p-5 border border-slate-200";
+      "bg-white rounded-2xl shadow-sm p-5 h-full border border-slate-200 hover:shadow-lg transition-shadow";
 
     const filedDate = formatDate(r.fd);
     
     card.innerHTML = `
-      <div class="flex flex-col h-full rounded-2xl border border-slate-200 bg-white p-4 hover:shadow-lg transition-shadow">
+      <div class="flex flex-col">
     
         <!-- Image -->
         <div class="flex justify-center items-center h-48 mb-4 overflow-hidden bg-slate-100 rounded-xl">
@@ -158,5 +158,6 @@ function renderResults(rows) {
     resultsEl.appendChild(card);
   }
 }
+
 
 
