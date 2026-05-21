@@ -24,72 +24,59 @@
             background: #cbd5e1;
             border-radius: 4px;
         }
-        .dark ::-webkit-scrollbar-thumb {
-            background: #475569;
-        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-gray-50 to-orange-50">
 
-    <!-- Brand Header (Synced with Trademark Upgrades Navigation) -->
-    <header class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800 shadow-sm transition-colors">
+    <!-- Brand Header -->
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm transition-colors">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Brand Logo (with text fallback if path not present) -->
+                <!-- Brand Logo -->
                 <a class="flex items-center space-x-2" href="https://trademarkupgrades.com/" data-discover="true">
-                    <img alt="Trademark Upgrades Logo" class="h-12 w-auto" src="imgs/logo-dark.png" onerror="this.onerror=null; this.outerHTML='<span class=\'text-xl font-extrabold text-slate-900 dark:text-white flex items-center gap-1.5\'><i class=\'fa-solid fa-trademark text-orange-600 text-2xl\'></i>Trademark Upgrades</span>'">
+                    <img alt="Trademark Upgrades Logo" class="h-12 w-auto" src="imgs/logo-dark.png" onerror="this.onerror=null; this.outerHTML='<span class=\'text-xl font-extrabold text-slate-900 flex items-center gap-1.5\'><i class=\'fa-solid fa-trademark text-orange-600 text-2xl\'></i>Trademark Upgrades</span>'">
                 </a>
                 
                 <!-- Desktop Navigation Menu -->
                 <nav class="hidden lg:flex items-center space-x-1">
-                    <a class="px-4 py-2 rounded-md text-sm font-medium transition-colors text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-gray-50 dark:hover:bg-slate-800" href="https://trademarkupgrades.com/" data-discover="true">Home</a>
-                    <a class="px-4 py-2 rounded-md text-sm font-medium transition-colors text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-gray-50 dark:hover:bg-slate-800" href="https://trademarkupgrades.com/about" data-discover="true">About Us</a>
+                    <a class="px-4 py-2 rounded-md text-sm font-medium transition-colors text-gray-700 hover:text-orange-600 hover:bg-gray-50" href="https://trademarkupgrades.com/" data-discover="true">Home</a>
+                    <a class="px-4 py-2 rounded-md text-sm font-medium transition-colors text-gray-700 hover:text-orange-600 hover:bg-gray-50" href="https://trademarkupgrades.com/about" data-discover="true">About Us</a>
                     
                     <!-- Services Dropdown Group -->
                     <div class="relative group">
-                        <a class="px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center text-orange-600 bg-orange-50 dark:bg-orange-950/20" href="https://trademarkupgrades.com/services" data-discover="true">
+                        <a class="px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center text-orange-600 bg-orange-50" href="https://trademarkupgrades.com/services" data-discover="true">
                             Services
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down ml-1 h-4 w-4" aria-hidden="true">
                                 <path d="m6 9 6 6 6-6"></path>
                             </svg>
                         </a>
 
-                        <div class="absolute left-0 mt-1 w-64 bg-white dark:bg-slate-900 rounded-lg shadow-lg border border-gray-200 dark:border-slate-800 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="absolute left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                             <div class="py-2">
-                                <a class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-orange-50 dark:hover:bg-orange-950/20 hover:text-orange-600 dark:hover:text-orange-400 transition-colors" href="https://lylanoble.github.io/trademarkupgrades-database/" data-discover="true">Trademark Search Engine</a>
-                                <a class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-orange-50 dark:hover:bg-orange-950/20 hover:text-orange-600 dark:hover:text-orange-400 transition-colors" href="https://trademarkupgrades.com/services/trademark-registration" data-discover="true">Trademark Registration</a>
-                                <a class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-orange-50 dark:hover:bg-orange-950/20 hover:text-orange-600 dark:hover:text-orange-400 transition-colors" href="https://trademarkupgrades.com/services/copyright-registration" data-discover="true">Copyright Registration</a>
-                                <a class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-orange-50 dark:hover:bg-orange-950/20 hover:text-orange-600 dark:hover:text-orange-400 transition-colors" href="https://trademarkupgrades.com/services/company-formation" data-discover="true">Company Formation</a>
-                                <a class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-orange-50 dark:hover:bg-orange-950/20 hover:text-orange-600 dark:hover:text-orange-400 transition-colors" href="https://trademarkupgrades.com/services/trademark-search" data-discover="true">Trademark Search</a>
-                                <a class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-orange-50 dark:hover:bg-orange-950/20 hover:text-orange-600 dark:hover:text-orange-400 transition-colors" href="https://trademarkupgrades.com/services/amazon-brand-registry" data-discover="true">Amazon Brand Registry</a>
+                                <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors" href="https://lylanoble.github.io/trademarkupgrades-database/" data-discover="true">Trademark Search Engine</a>
+                                <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors" href="https://trademarkupgrades.com/services/trademark-registration" data-discover="true">Trademark Registration</a>
+                                <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors" href="https://trademarkupgrades.com/services/copyright-registration" data-discover="true">Copyright Registration</a>
+                                <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors" href="https://trademarkupgrades.com/services/company-formation" data-discover="true">Company Formation</a>
+                                <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors" href="https://trademarkupgrades.com/services/trademark-search" data-discover="true">Trademark Search</a>
+                                <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors" href="https://trademarkupgrades.com/services/amazon-brand-registry" data-discover="true">Amazon Brand Registry</a>
                             </div>
                         </div>
                     </div>
                     
-                    <a class="px-4 py-2 rounded-md text-sm font-medium transition-colors text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-gray-50 dark:hover:bg-slate-800" href="https://trademarkupgrades.com/contact" data-discover="true">Contact Us</a>
+                    <a class="px-4 py-2 rounded-md text-sm font-medium transition-colors text-gray-700 hover:text-orange-600 hover:bg-gray-50" href="https://trademarkupgrades.com/contact" data-discover="true">Contact Us</a>
                 </nav>
                 
-                <!-- Header CTA Buttons & Theme Toggles -->
+                <!-- Header CTA Buttons -->
                 <div class="lg:flex items-center gap-3">
-                    <!-- Light / Dark Toggle Integration -->
-                    <button id="themeToggle" onclick="toggleTheme()" class="hidden p-2 rounded-lg text-slate-500 hover:text-orange-600 dark:text-slate-400 dark:hover:text-orange-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" title="Toggle Theme">
-                        <i class="fa-solid fa-moon text-base dark:hidden"></i>
-                        <i class="fa-solid fa-sun text-base hidden dark:block"></i>
-                    </button>
-                    
                     <button onclick="scrollToBooking()" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow h-9 px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white">Get Started</button>
-                    <a href="https://trademarkupgrades.com/contact" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border shadow-sm h-9 px-4 py-2 border-orange-600 text-orange-600 hover:bg-orange-50 dark:hover:bg-orange-950/20">
+                    <a href="https://trademarkupgrades.com/contact" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border shadow-sm h-9 px-4 py-2 border-orange-600 text-orange-600 hover:bg-orange-50">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle mr-2 h-4 w-4" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>Chat Now
                     </a>
                 </div>
 
-                <!-- Mobile Drawer Icon and Dark Toggle Button -->
-                <div class=" hidden flex items-center gap-2 lg:hidden">
-                    <button onclick="toggleTheme()" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" title="Toggle Theme">
-                        <i class="fa-solid fa-moon text-base dark:hidden"></i>
-                        <i class="fa-solid fa-sun text-base hidden dark:block"></i>
-                    </button>
-                    <button class="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800" id="m-menu-btn">
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center gap-2 lg:hidden">
+                    <button class="p-2 rounded-md text-gray-700 hover:bg-gray-100" id="m-menu-btn">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                         </svg>
@@ -98,26 +85,25 @@
             </div>
 
             <!-- Mobile Navigation Menu -->
-            <div class="hidden lg:hidden py-4 border-t border-gray-200 dark:border-slate-800" id="m-menu">
+            <div class="hidden lg:hidden py-4 border-t border-gray-200" id="m-menu">
                 <div class="flex flex-col space-y-2">
-                    <a class="px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-800 rounded-md" href="https://trademarkupgrades.com" data-discover="true">Home</a>
-                    <a class="px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-800 rounded-md" href="https://trademarkupgrades.com/about" data-discover="true">About Us</a>
-                    <a class="px-4 py-2 text-orange-600 dark:text-orange-400 font-semibold hover:bg-gray-50 dark:hover:bg-slate-800 rounded-md" href="https://trademarkupgrades.com/services" data-discover="true">Services</a>
+                    <a class="px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-md" href="https://trademarkupgrades.com" data-discover="true">Home</a>
+                    <a class="px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-md" href="https://trademarkupgrades.com/about" data-discover="true">About Us</a>
+                    <a class="px-4 py-2 text-orange-600 font-semibold hover:bg-gray-50 rounded-md" href="https://trademarkupgrades.com/services" data-discover="true">Services</a>
                     
-                    <!-- Sub Services inside mobile drawer -->
-                    <a class="pl-8 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-800 rounded-md" href="https://lylanoble.github.io/trademarkupgrades-database/" data-discover="true">Trademark Search Engine</a>
-                    <a class="pl-8 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-800 rounded-md" href="https://trademarkupgrades.com/services/trademark-registration" data-discover="true">Trademark Registration</a>
-                    <a class="pl-8 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-800 rounded-md" href="https://trademarkupgrades.com/services/copyright-registration" data-discover="true">Copyright Registration</a>
-                    <a class="pl-8 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-800 rounded-md" href="https://trademarkupgrades.com/services/company-formation" data-discover="true">Company Formation</a>
-                    <a class="pl-8 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-800 rounded-md" href="https://trademarkupgrades.com/services/trademark-search" data-discover="true">Trademark Search</a>
-                    <a class="pl-8 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-800 rounded-md" href="https://trademarkupgrades.com/services/amazon-brand-registry" data-discover="true">Amazon Brand Registry</a>
+                    <a class="pl-8 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-md" href="https://lylanoble.github.io/trademarkupgrades-database/" data-discover="true">Trademark Search Engine</a>
+                    <a class="pl-8 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-md" href="https://trademarkupgrades.com/services/trademark-registration" data-discover="true">Trademark Registration</a>
+                    <a class="pl-8 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-md" href="https://trademarkupgrades.com/services/copyright-registration" data-discover="true">Copyright Registration</a>
+                    <a class="pl-8 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-md" href="https://trademarkupgrades.com/services/company-formation" data-discover="true">Company Formation</a>
+                    <a class="pl-8 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-md" href="https://trademarkupgrades.com/services/trademark-search" data-discover="true">Trademark Search</a>
+                    <a class="pl-8 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-md" href="https://trademarkupgrades.com/services/amazon-brand-registry" data-discover="true">Amazon Brand Registry</a>
                     
-                    <a class="px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-800 rounded-md" href="https://trademarkupgrades.com/contact" data-discover="true">Contact Us</a>
+                    <a class="px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-md" href="https://trademarkupgrades.com/contact" data-discover="true">Contact Us</a>
                     
                     <!-- Mobile CTAs -->
                     <div class="px-4 pt-2 space-y-2">
                         <button onclick="scrollToBooking()" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow h-9 px-4 py-2 w-full bg-orange-600 hover:bg-orange-700 text-white">Get Started</button>
-                        <a href="https://trademarkupgrades.com/contact" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border shadow-sm h-9 px-4 py-2 w-full border-orange-600 text-orange-600 hover:bg-orange-50 dark:hover:bg-orange-950/20">
+                        <a href="https://trademarkupgrades.com/contact" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border shadow-sm h-9 px-4 py-2 w-full border-orange-600 text-orange-600 hover:bg-orange-50">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle mr-2 h-4 w-4" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>Chat Now
                         </a>
                     </div>
@@ -132,39 +118,39 @@
         <!-- Action Status notifications -->
         <div id="toast" class="hidden fixed bottom-5 right-5 z-50 p-4 rounded-xl shadow-lg border text-sm max-w-sm w-80 animate-bounce"></div>
 
-        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl overflow-hidden transition-colors">
+        <div class="bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden transition-colors">
             <!-- Heading Block -->
-            <div class="p-6 border-b border-slate-100 dark:border-slate-800/80 bg-slate-50 dark:bg-slate-900/50">
-                <div class="flex items-center space-x-2 text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider">
-                    <span class="w-2 h-2 rounded-full bg-primary-600 animate-pulse"></span>
+            <div class="p-6 border-b border-slate-100 bg-slate-50">
+                <div class="flex items-center space-x-2 text-xs font-semibold text-orange-600 uppercase tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-orange-600 animate-pulse"></span>
                     <span>Identity Verification</span>
                 </div>
-                <h1 class="text-xl sm:text-2xl font-bold mt-1 text-slate-900 dark:text-white">Schedule Verification Call</h1>
-                <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Select an open slot to arrange your 30-minute quick verification session.</p>
+                <h1 class="text-xl sm:text-2xl font-bold mt-1 text-slate-900">Schedule Verification Call</h1>
+                <p class="text-sm text-slate-500 mt-1">Select an open slot to arrange your 30-minute quick verification session.</p>
             </div>
 
             <!-- Booking form workspace split layout -->
             <div class="grid grid-cols-1 md:grid-cols-12">
                 
                 <!-- Left panel: Date selector & Slots selector -->
-                <div class="md:col-span-7 p-6 border-r border-slate-100 dark:border-slate-800/80 space-y-5">
+                <div class="md:col-span-7 p-6 border-r border-slate-100 space-y-5">
                     
                     <!-- Date Section Header -->
                     <div>
                         <div class="flex items-center justify-between mb-3">
-                            <h2 id="calendarMonthYear" class="font-bold text-sm text-slate-700 dark:text-slate-300">September 2026</h2>
+                            <h2 id="calendarMonthYear" class="font-bold text-sm text-slate-700">September 2026</h2>
                             <div class="flex space-x-1">
-                                <button type="button" onclick="changeMonth(-1)" class="p-1.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                                <button type="button" onclick="changeMonth(-1)" class="p-1.5 rounded-lg border border-slate-200 hover:bg-slate-100 transition-colors">
                                     <i class="fa-solid fa-chevron-left text-xs"></i>
                                 </button>
-                                <button type="button" onclick="changeMonth(1)" class="p-1.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                                <button type="button" onclick="changeMonth(1)" class="p-1.5 rounded-lg border border-slate-200 hover:bg-slate-100 transition-colors">
                                     <i class="fa-solid fa-chevron-right text-xs"></i>
                                 </button>
                             </div>
                         </div>
 
                         <!-- Calendar Grid -->
-                        <div class="grid grid-cols-7 gap-1 text-center text-xs font-bold text-slate-400 dark:text-slate-500 mb-2">
+                        <div class="grid grid-cols-7 gap-1 text-center text-xs font-bold text-slate-400 mb-2">
                             <div>Su</div><div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div>
                         </div>
                         <div id="calendarDaysGrid" class="grid grid-cols-7 gap-1">
@@ -174,13 +160,12 @@
 
                     <!-- Time slots block -->
                     <div>
-                        <h3 class="font-bold text-sm text-slate-700 dark:text-slate-300 mb-3 flex justify-between items-center">
+                        <h3 class="font-bold text-sm text-slate-700 mb-3 flex justify-between items-center">
                             <span>Available Times</span>
                             <span id="selectedDateLabel" class="text-xs font-normal text-slate-400">No date selected</span>
                         </h3>
                         <div id="slotsContainer" class="grid grid-cols-3 gap-2">
-                            <!-- Populated with time slot buttons -->
-                            <div class="col-span-3 text-center py-6 text-xs text-slate-400 dark:text-slate-500 italic bg-slate-50 dark:bg-slate-900/30 rounded-lg">
+                            <div class="col-span-3 text-center py-6 text-xs text-slate-400 italic bg-slate-50 rounded-lg">
                                 Please select a date first
                             </div>
                         </div>
@@ -189,28 +174,28 @@
                 </div>
 
                 <!-- Right panel: Contact fields -->
-                <div class="md:col-span-5 p-6 bg-slate-50/50 dark:bg-slate-900/20 flex flex-col justify-between">
+                <div class="md:col-span-5 p-6 bg-slate-50/50 flex flex-col justify-between">
                     <form id="bookingForm" onsubmit="submitForm(event)" class="space-y-4">
-                        <h3 class="font-bold text-sm text-slate-700 dark:text-slate-300">Your Contact Details</h3>
+                        <h3 class="font-bold text-sm text-slate-700">Your Contact Details</h3>
                         
                         <div class="space-y-1">
-                            <label for="custName" class="block text-xs font-semibold text-slate-500 dark:text-slate-400">Your Name *</label>
-                            <input type="text" id="custName" required placeholder="John Doe" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all text-slate-800 dark:text-white">
+                            <label for="custName" class="block text-xs font-semibold text-slate-500">Your Name *</label>
+                            <input type="text" id="custName" required placeholder="John Doe" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-200 bg-white focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-slate-800">
                         </div>
 
                         <div class="space-y-1">
-                            <label for="custEmail" class="block text-xs font-semibold text-slate-500 dark:text-slate-400">Your Email *</label>
-                            <input type="email" id="custEmail" required placeholder="john@example.com" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all text-slate-800 dark:text-white">
+                            <label for="custEmail" class="block text-xs font-semibold text-slate-500">Your Email *</label>
+                            <input type="email" id="custEmail" required placeholder="john@example.com" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-200 bg-white focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-slate-800">
                         </div>
 
                         <div class="space-y-1">
-                            <label for="custPhone" class="block text-xs font-semibold text-slate-500 dark:text-slate-400">Phone Number *</label>
-                            <input type="tel" id="custPhone" required placeholder="+1 (555) 019-2834" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all text-slate-800 dark:text-white">
+                            <label for="custPhone" class="block text-xs font-semibold text-slate-500">Phone Number *</label>
+                            <input type="tel" id="custPhone" required placeholder="+1 (555) 019-2834" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-200 bg-white focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-slate-800">
                         </div>
 
                         <!-- Submit Block -->
                         <div class="pt-4">
-                            <button id="submitBtn" type="submit" disabled class="w-full py-2.5 px-4 rounded-xl text-sm font-semibold text-white bg-slate-300 dark:bg-slate-800 cursor-not-allowed transition-all shadow-md flex items-center justify-center space-x-2">
+                            <button id="submitBtn" type="submit" disabled class="w-full py-2.5 px-4 rounded-xl text-sm font-semibold text-white bg-slate-300 cursor-not-allowed transition-all shadow-md flex items-center justify-center space-x-2">
                                 <i class="fa-solid fa-calendar-check"></i>
                                 <span>Schedule Session</span>
                             </button>
@@ -223,8 +208,8 @@
         </div>
 
         <!-- Success Ticket Screen -->
-        <div id="successPanel" class="hidden mt-8 max-w-lg mx-auto bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl overflow-hidden p-6 text-center space-y-5 animate-scale-up">
-            <div class="w-16 h-16 mx-auto bg-orange-100 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 rounded-full flex items-center justify-center text-2xl shadow">
+        <div id="successPanel" class="hidden mt-8 max-w-lg mx-auto bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden p-6 text-center space-y-5">
+            <div class="w-16 h-16 mx-auto bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-2xl shadow">
                 <i class="fa-solid fa-check-double"></i>
             </div>
             <div>
@@ -233,22 +218,22 @@
             </div>
 
             <!-- Simple details recap -->
-            <div class="bg-slate-50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 text-left space-y-2.5">
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-left space-y-2.5">
                 <div class="flex justify-between text-xs">
                     <span class="text-slate-400">Date Chosen:</span>
-                    <span id="successDateVal" class="font-bold text-slate-800 dark:text-slate-200">-</span>
+                    <span id="successDateVal" class="font-bold text-slate-800">-</span>
                 </div>
                 <div class="flex justify-between text-xs">
                     <span class="text-slate-400">Time Chosen:</span>
-                    <span id="successTimeVal" class="font-bold text-primary-600 dark:text-primary-400">-</span>
+                    <span id="successTimeVal" class="font-bold text-orange-600">-</span>
                 </div>
                 <div class="flex justify-between text-xs">
                     <span class="text-slate-400">Scheduled Candidate:</span>
-                    <span id="successUserVal" class="font-bold text-slate-800 dark:text-slate-200">-</span>
+                    <span id="successUserVal" class="font-bold text-slate-800">-</span>
                 </div>
             </div>
 
-            <button onclick="dismissSuccess()" class="w-full py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-xs font-bold rounded-lg transition-all text-slate-800 dark:text-slate-200">
+            <button onclick="dismissSuccess()" class="w-full py-2 bg-slate-100 hover:bg-slate-200 text-xs font-bold rounded-lg transition-all text-slate-800">
                 Close & Schedule Another
             </button>
         </div>
@@ -261,13 +246,11 @@
             selectedTimeSlot: null,
             calendarYear: 2026,
             calendarMonth: 4, // May (0-based)
-            // TO CONNECT: Replace the string below with your Google Apps Script Web App URL
             scriptUrl: 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE'
         };
 
         window.onload = function() {
             renderCalendar();
-            // Mobile menu event listeners
             const menuBtn = document.getElementById('m-menu-btn');
             const mobileMenu = document.getElementById('m-menu');
             if (menuBtn && mobileMenu) {
@@ -277,20 +260,17 @@
             }
         };
 
-        // Scroll helper function for Get Started CTA
         function scrollToBooking() {
             const el = document.getElementById('bookingSection');
             if (el) {
                 el.scrollIntoView({ behavior: 'smooth' });
             }
-            // Hide mobile menu if open
             const mobileMenu = document.getElementById('m-menu');
             if (mobileMenu) {
                 mobileMenu.classList.add('hidden');
             }
         }
 
-        // Render visual simplified month calendar
         function renderCalendar() {
             const grid = document.getElementById('calendarDaysGrid');
             grid.innerHTML = '';
@@ -302,15 +282,13 @@
             const totalDays = new Date(state.calendarYear, state.calendarMonth + 1, 0).getDate();
             const prevMonthTotalDays = new Date(state.calendarYear, state.calendarMonth, 0).getDate();
 
-            // Padding days prior month
             for (let i = firstDayIndex - 1; i >= 0; i--) {
                 const dayDiv = document.createElement('div');
-                dayDiv.className = 'text-center py-2 text-xs text-slate-300 dark:text-slate-700 pointer-events-none select-none';
+                dayDiv.className = 'text-center py-2 text-xs text-slate-300 pointer-events-none select-none';
                 dayDiv.innerText = prevMonthTotalDays - i;
                 grid.appendChild(dayDiv);
             }
 
-            // Populating active months days (simple people: weekends closed, future only)
             const today = new Date();
             for (let day = 1; day <= totalDays; day++) {
                 const dayStr = `${state.calendarYear}-${String(state.calendarMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
@@ -318,7 +296,7 @@
                 const dayOfWeek = dateObj.getDay();
 
                 const isPast = dateObj < new Date(today.getFullYear(), today.getMonth(), today.getDate());
-                const isWeekend = (dayOfWeek === 0 || dayOfWeek === 6); // Simple rules: Sat/Sun closed
+                const isWeekend = (dayOfWeek === 0 || dayOfWeek === 6);
                 const isAvailable = !isPast && !isWeekend;
 
                 const dayBtn = document.createElement('button');
@@ -327,13 +305,13 @@
                 let style = 'h-9 text-xs font-semibold rounded-lg flex items-center justify-center transition-all ';
                 
                 if (state.selectedDate === dayStr) {
-                    style += 'bg-primary-600 text-white shadow-md shadow-primary-500/10 scale-105';
+                    style += 'bg-orange-600 text-white shadow-md scale-105';
                     dayBtn.onclick = () => selectDate(dayStr);
                 } else if (isAvailable) {
-                    style += 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-primary-100 hover:text-primary-700 dark:hover:bg-primary-950/40 dark:hover:text-primary-400';
+                    style += 'bg-slate-100 text-slate-700 hover:bg-orange-100 hover:text-orange-700';
                     dayBtn.onclick = () => selectDate(dayStr);
                 } else {
-                    style += 'bg-transparent text-slate-300 dark:text-slate-800 cursor-not-allowed';
+                    style += 'bg-transparent text-slate-300 cursor-not-allowed';
                 }
 
                 dayBtn.className = style;
@@ -354,7 +332,6 @@
             renderCalendar();
         }
 
-        // Date Selection updates timeslot grid
         function selectDate(dateStr) {
             state.selectedDate = dateStr;
             state.selectedTimeSlot = null;
@@ -383,9 +360,9 @@
                 let style = 'py-2 px-1 text-xs font-semibold rounded-lg border text-center transition-all ';
 
                 if (isSelected) {
-                    style += 'bg-primary-600 text-white border-primary-600 shadow-md';
+                    style += 'bg-orange-600 text-white border-orange-600 shadow-md';
                 } else {
-                    style += 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:border-primary-500 hover:text-primary-600 dark:hover:text-primary-400';
+                    style += 'bg-white text-slate-700 border-slate-200 hover:border-orange-500 hover:text-orange-600';
                 }
 
                 slotBtn.className = style;
@@ -400,86 +377,72 @@
             });
         }
 
-        // Verify selection requirements are fulfilled
         function validateForm() {
             const btn = document.getElementById('submitBtn');
             const warn = document.getElementById('missingWarning');
 
             if (state.selectedDate && state.selectedTimeSlot) {
                 btn.disabled = false;
-                btn.className = "w-full py-2.5 px-4 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-primary-600 to-orange-600 hover:scale-[1.01] transition-all shadow-md flex items-center justify-center space-x-2 cursor-pointer";
+                btn.className = "w-full py-2.5 px-4 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-orange-600 to-orange-500 hover:scale-[1.01] transition-all shadow-md flex items-center justify-center space-x-2 cursor-pointer";
                 warn.classList.add('hidden');
             } else {
                 btn.disabled = true;
-                btn.className = "w-full py-2.5 px-4 rounded-xl text-sm font-semibold text-white bg-slate-300 dark:bg-slate-800 cursor-not-allowed transition-all shadow-md flex items-center justify-center space-x-2";
+                btn.className = "w-full py-2.5 px-4 rounded-xl text-sm font-semibold text-white bg-slate-300 cursor-not-allowed transition-all shadow-md flex items-center justify-center space-x-2";
                 warn.classList.remove('hidden');
             }
         }
 
-        // Submit handler targeting Google Apps Script endpoint
-function submitForm(event) {
-    event.preventDefault();
+        function submitForm(event) {
+            event.preventDefault();
 
-    const btn = document.getElementById('submitBtn');
-    btn.disabled = true;
-    btn.innerText = "Submitting appointment...";
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerText = "Submitting appointment...";
 
-    const payload = {
-        date: state.selectedDate,
-        time: state.selectedTimeSlot,
-        name: document.getElementById('custName').value,
-        email: document.getElementById('custEmail').value,
-        phone: document.getElementById('custPhone').value,
-        timestamp: new Date().toISOString()
-    };
+            const payload = {
+                date: state.selectedDate,
+                time: state.selectedTimeSlot,
+                name: document.getElementById('custName').value,
+                email: document.getElementById('custEmail').value,
+                phone: document.getElementById('custPhone').value,
+                timestamp: new Date().toISOString()
+            };
 
-    // 🔴 PUT YOUR GOOGLE APPS SCRIPT WEB APP URL HERE
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz1lRryKNVzod-BvQLNo8IRI8AYtRt50jM2e98N7kbwu34ktTg6uujIQNa0H-nM6G0_/exec";
+            const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz1lRryKNVzod-BvQLNo8IRI8AYtRt50jM2e98N7kbwu34ktTg6uujIQNa0H-nM6G0_/exec";
 
-    fetch(SCRIPT_URL, {
-        method: 'POST',
-        mode: 'cors',
-        redirect: 'follow',
-        headers: {
-            'Content-Type': 'text/plain'
-        },
-        body: JSON.stringify(payload)
-    })
-    .then(async (res) => {
-        const text = await res.text();
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                mode: 'cors',
+                redirect: 'follow',
+                headers: {
+                    'Content-Type': 'text/plain'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(async (res) => {
+                const text = await res.text();
 
-        let data;
-        try {
-            data = JSON.parse(text);
-        } catch (e) {
-            throw new Error("Invalid response from server: " + text);
+                let data;
+                try {
+                    data = JSON.parse(text);
+                } catch (e) {
+                    throw new Error("Invalid response from server: " + text);
+                }
+
+                if (!res.ok || data.status !== "success") {
+                    throw new Error(data.message || "Failed to submit booking");
+                }
+
+                showToast("Verified Successfully", "Appointment logged straight to Google Sheets!", "success");
+                displaySuccessState(payload);
+            })
+            .catch(err => {
+                console.error("Submission error:", err);
+                showToast("Submission Failed", err.message || "Could not write row to Apps Script endpoint.", "error");
+                btn.disabled = false;
+                btn.innerText = "Schedule Session";
+            });
         }
-
-        if (!res.ok || data.status !== "success") {
-            throw new Error(data.message || "Failed to submit booking");
-        }
-
-        showToast(
-            "Verified Successfully",
-            "Appointment logged straight to Google Sheets!",
-            "success"
-        );
-
-        displaySuccessState(payload);
-    })
-    .catch(err => {
-        console.error("Submission error:", err);
-
-        showToast(
-            "Submission Failed",
-            err.message || "Could not write row to Apps Script endpoint.",
-            "error"
-        );
-
-        btn.disabled = false;
-        btn.innerText = "Schedule Session";
-    });
-}
 
         function displaySuccessState(data) {
             document.getElementById('successDateVal').innerText = new Date(data.date).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
@@ -500,7 +463,7 @@ function submitForm(event) {
             
             document.getElementById('selectedDateLabel').innerText = "No date selected";
             document.getElementById('slotsContainer').innerHTML = `
-                <div class="col-span-3 text-center py-6 text-xs text-slate-400 dark:text-slate-500 italic bg-slate-50 dark:bg-slate-900/30 rounded-lg">
+                <div class="col-span-3 text-center py-6 text-xs text-slate-400 italic bg-slate-50 rounded-lg">
                     Please select a date first
                 </div>
             `;
@@ -513,9 +476,9 @@ function submitForm(event) {
             const toast = document.getElementById('toast');
             
             const styles = {
-                success: 'bg-green-50 dark:bg-green-950/40 border-green-500 text-green-700 dark:text-green-300',
-                error: 'bg-red-50 dark:bg-red-950/40 border-red-500 text-red-700 dark:text-red-300',
-                info: 'bg-blue-50 dark:bg-blue-950/40 border-blue-500 text-blue-700 dark:text-blue-300'
+                success: 'bg-green-50 border-green-500 text-green-700',
+                error: 'bg-red-50 border-red-500 text-red-700',
+                info: 'bg-blue-50 border-blue-500 text-blue-700'
             };
 
             toast.className = `fixed bottom-5 right-5 z-50 p-4 rounded-xl shadow-lg border text-sm max-w-sm w-80 flex flex-col gap-1 transition-all duration-300 ${styles[type]}`;
