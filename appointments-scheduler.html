@@ -467,53 +467,69 @@
             }
         }
 
-        // Submit handler targeting real sheet API endpoint
-        function submitForm(event) {
-            event.preventDefault();
+        // Submit handler targeting Google Apps Script endpoint
+function submitForm(event) {
+    event.preventDefault();
 
-            const btn = document.getElementById('submitBtn');
-            btn.disabled = true;
-            btn.innerText = "Submitting appointment...";
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.innerText = "Submitting appointment...";
 
-            const payload = {
-                date: state.selectedDate,
-                time: state.selectedTimeSlot,
-                name: document.getElementById('custName').value,
-                email: document.getElementById('custEmail').value,
-                phone: document.getElementById('custPhone').value,
-                documentType: document.getElementById('docType').value,
-                timestamp: new Date().toISOString()
-            };
+    const payload = {
+        date: state.selectedDate,
+        time: state.selectedTimeSlot,
+        name: document.getElementById('custName').value,
+        email: document.getElementById('custEmail').value,
+        phone: document.getElementById('custPhone').value,
+        documentType: document.getElementById('docType').value,
+        timestamp: new Date().toISOString()
+    };
 
-            // If a custom Web App endpoint script is configured
-            if (state.scriptUrl && state.scriptUrl !== 'https://script.google.com/macros/s/AKfycbxSFxTHlWe0DHNFGb2glRrx3PGBflza2ca3pgAChzA4p2QI6OviID7OR-w5ETytSDHT/exec' && state.scriptUrl.startsWith('https://')) {
-                // Submit POST using no-cors because standard GAS does not return direct headers easily
-                fetch(state.scriptUrl, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(payload)
-                })
-                .then(() => {
-                    showToast("Verified Successfully", "Appointment logged straight to Google Sheets!", "success");
-                    displaySuccessState(payload);
-                })
-                .catch(err => {
-                    console.error("Connection failed", err);
-                    showToast("Failed connection", "Could not write row to Apps Script endpoint.", "error");
-                    btn.disabled = false;
-                    btn.innerText = "Schedule Session";
-                });
-            } else {
-                // Fallback Mock save for user evaluation
-                setTimeout(() => {
-                    showToast("Saved Successfully", "Your booking has been saved.", "success");
-                    displaySuccessState(payload);
-                }, 800);
-            }
+    // 🔴 PUT YOUR GOOGLE APPS SCRIPT WEB APP URL HERE
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyvhwR34fvnWx_B4dqFvqE32VS4DyyMrgtPPM4D96nyadau8BborXLYYuke_L60MJU/exec";
+
+    fetch(SCRIPT_URL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+    })
+    .then(async (res) => {
+        const text = await res.text();
+
+        let data;
+        try {
+            data = JSON.parse(text);
+        } catch (e) {
+            throw new Error("Invalid response from server: " + text);
         }
+
+        if (!res.ok || data.status !== "success") {
+            throw new Error(data.message || "Failed to submit booking");
+        }
+
+        showToast(
+            "Verified Successfully",
+            "Appointment logged straight to Google Sheets!",
+            "success"
+        );
+
+        displaySuccessState(payload);
+    })
+    .catch(err => {
+        console.error("Submission error:", err);
+
+        showToast(
+            "Submission Failed",
+            err.message || "Could not write row to Apps Script endpoint.",
+            "error"
+        );
+
+        btn.disabled = false;
+        btn.innerText = "Schedule Session";
+    });
+}
 
         function displaySuccessState(data) {
             document.getElementById('successDateVal').innerText = new Date(data.date).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
