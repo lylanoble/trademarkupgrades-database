@@ -486,7 +486,7 @@
             };
 
             // If a custom Web App endpoint script is configured
-            if (state.scriptUrl && state.scriptUrl !== 'https://script.google.com/macros/s/AKfycbwTSHKDtU7g44Ol9ZZfdgB96Gwtp40mJd5dPbhuz8iI12w94mPlzyY7LshmtB5MPKDy/exec' && state.scriptUrl.startsWith('https://')) {
+            if (state.scriptUrl && state.scriptUrl !== 'https://script.google.com/macros/s/AKfycbxSFxTHlWe0DHNFGb2glRrx3PGBflza2ca3pgAChzA4p2QI6OviID7OR-w5ETytSDHT/exec' && state.scriptUrl.startsWith('https://')) {
                 // Submit POST using no-cors because standard GAS does not return direct headers easily
                 fetch(state.scriptUrl, {
                     method: 'POST',
