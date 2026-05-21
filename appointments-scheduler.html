@@ -6,29 +6,6 @@
     <title>Verification Call Scheduler - Trademark Upgrades</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        window.tailwind = {
-            config: {
-                darkMode: 'class',
-                theme: {
-                    extend: {
-                        colors: {
-                            primary: {
-                                50: '#fff7ed',
-                                100: '#ffedd5',
-                                500: '#f97316',
-                                600: '#ea580c',
-                                700: '#c2410c',
-                            }
-                        },
-                        fontFamily: {
-                            sans: ['Inter', 'sans-serif'],
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 
     <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -289,16 +266,7 @@
         };
 
         window.onload = function() {
-            // Check saved theme or system preferences
-            if (localStorage.getItem('cal_theme') === 'dark' || 
-                (!localStorage.getItem('cal_theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-            }
-            
             renderCalendar();
-
             // Mobile menu event listeners
             const menuBtn = document.getElementById('m-menu-btn');
             const mobileMenu = document.getElementById('m-menu');
@@ -319,18 +287,6 @@
             const mobileMenu = document.getElementById('m-menu');
             if (mobileMenu) {
                 mobileMenu.classList.add('hidden');
-            }
-        }
-
-        // Dark theme switch handling
-        function toggleTheme() {
-            const html = document.documentElement;
-            if (html.classList.contains('dark')) {
-                html.classList.remove('dark');
-                localStorage.setItem('cal_theme', 'light');
-            } else {
-                html.classList.add('dark');
-                localStorage.setItem('cal_theme', 'dark');
             }
         }
 
