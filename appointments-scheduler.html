@@ -216,21 +216,21 @@
             </div>
             <div>
                 <h2 class="text-xl font-bold">Verification Reserved!</h2>
-                <p class="text-xs text-slate-400 mt-1">We saved your data row. Look out for your verification call at your chosen slot.</p>
+                <p class="text-xs text-slate-400 mt-1">We booked your appointment, Look out for your verification call at your chosen slot.</p>
             </div>
 
             <!-- Simple details recap -->
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-left space-y-2.5">
                 <div class="flex justify-between text-xs">
-                    <span class="text-slate-400">Date Chosen:</span>
+                    <span class="text-slate-400">Date :</span>
                     <span id="successDateVal" class="font-bold text-slate-800">-</span>
                 </div>
                 <div class="flex justify-between text-xs">
-                    <span class="text-slate-400">Time Chosen:</span>
+                    <span class="text-slate-400">Time :</span>
                     <span id="successTimeVal" class="font-bold text-orange-600">-</span>
                 </div>
                 <div class="flex justify-between text-xs">
-                    <span class="text-slate-400">Scheduled Candidate:</span>
+                    <span class="text-slate-400">Scheduled For :</span>
                     <span id="successUserVal" class="font-bold text-slate-800">-</span>
                 </div>
             </div>
@@ -449,7 +449,7 @@
         function displaySuccessState(data) {
             document.getElementById('successDateVal').innerText = new Date(data.date).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
             document.getElementById('successTimeVal').innerText = data.time;
-            document.getElementById('successUserVal').innerText = `${data.name} (${data.phone})`;
+            document.getElementById('successUserVal').innerText = `${data.name}`;
 
             document.getElementById('bookingForm').classList.add('hidden');
             document.getElementById('successPanel').classList.remove('hidden');
