@@ -195,6 +195,67 @@
                             <input type="tel" id="custPhone" required placeholder="+1 (555) 019-2834" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-200 bg-white focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-slate-800">
                         </div>
 
+                        <div class="space-y-1">
+                            <label for="custState" class="block text-xs font-semibold text-slate-500">
+                                Select State *
+                            </label>
+                        
+                            <select id="custState" required class="w-full px-3 py-2 text-sm rounded-lg border border-slate-200 bg-white focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-slate-800">
+                                <option value="" selected disabled>Select your state</option>
+                        
+                                <option value="AL-CST">Alabama</option>
+                                <option value="AK-AKST">Alaska</option>
+                                <option value="AZ-MST">Arizona</option>
+                                <option value="AR-CST">Arkansas</option>
+                                <option value="CA-PST">California</option>
+                                <option value="CO-MST">Colorado</option>
+                                <option value="CT-EST">Connecticut</option>
+                                <option value="DE-EST">Delaware</option>
+                                <option value="FL-EST">Florida</option>
+                                <option value="GA-EST">Georgia</option>
+                                <option value="HI-HST">Hawaii</option>
+                                <option value="ID-MST">Idaho</option>
+                                <option value="IL-CST">Illinois</option>
+                                <option value="IN-EST">Indiana</option>
+                                <option value="IA-CST">Iowa</option>
+                                <option value="KS-CST">Kansas</option>
+                                <option value="KY-EST">Kentucky</option>
+                                <option value="LA-CST">Louisiana</option>
+                                <option value="ME-EST">Maine</option>
+                                <option value="MD-EST">Maryland</option>
+                                <option value="MA-EST">Massachusetts</option>
+                                <option value="MI-EST">Michigan</option>
+                                <option value="MN-CST">Minnesota</option>
+                                <option value="MS-CST">Mississippi</option>
+                                <option value="MO-CST">Missouri</option>
+                                <option value="MT-MST">Montana</option>
+                                <option value="NE-CST">Nebraska</option>
+                                <option value="NV-PST">Nevada</option>
+                                <option value="NH-EST">New Hampshire</option>
+                                <option value="NJ-EST">New Jersey</option>
+                                <option value="NM-MST">New Mexico</option>
+                                <option value="NY-EST">New York</option>
+                                <option value="NC-EST">North Carolina</option>
+                                <option value="ND-CST">North Dakota</option>
+                                <option value="OH-EST">Ohio</option>
+                                <option value="OK-CST">Oklahoma</option>
+                                <option value="OR-PST">Oregon</option>
+                                <option value="PA-EST">Pennsylvania</option>
+                                <option value="RI-EST">Rhode Island</option>
+                                <option value="SC-EST">South Carolina</option>
+                                <option value="SD-CST">South Dakota</option>
+                                <option value="TN-CST">Tennessee</option>
+                                <option value="TX-CST">Texas</option>
+                                <option value="UT-MST">Utah</option>
+                                <option value="VT-EST">Vermont</option>
+                                <option value="VA-EST">Virginia</option>
+                                <option value="WA-PST">Washington</option>
+                                <option value="WV-EST">West Virginia</option>
+                                <option value="WI-CST">Wisconsin</option>
+                                <option value="WY-MST">Wyoming</option>
+                            </select>
+                        </div>
+
                         <!-- Submit Block -->
                         <div class="pt-4">
                             <button id="submitBtn" type="submit" disabled class="w-full py-2.5 px-4 rounded-xl text-sm font-semibold text-white bg-slate-300 cursor-not-allowed transition-all shadow-md flex items-center justify-center space-x-2">
@@ -407,6 +468,7 @@
                 name: document.getElementById('custName').value,
                 email: document.getElementById('custEmail').value,
                 phone: document.getElementById('custPhone').value,
+                state: document.getElementById('custState').value,
                 timestamp: new Date().toISOString()
             };
 
