@@ -307,8 +307,8 @@
         const state = {
             selectedDate: null,
             selectedTimeSlot: null,
-            calendarYear: 2026,
-            calendarMonth: 4, // May (0-based)
+            calendarYear: new Date().getFullYear(),
+            calendarMonth: new Date().getMonth(),
             scriptUrl: 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE'
         };
 
