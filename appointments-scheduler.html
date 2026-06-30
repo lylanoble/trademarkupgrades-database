@@ -182,7 +182,7 @@
                         
                         <div class="space-y-1">
                             <label for="custName" class="block text-xs font-semibold text-slate-500">Your Name *</label>
-                            <input type="text" id="custName" required placeholder="John Doe" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-200 bg-white focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-slate-800">
+                            <input type="text" id="custName" placeholder="John Doe" pattern="[A-Za-z\s]+" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-200 bg-white focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-slate-800" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" required>
                         </div>
 
                         <div class="space-y-1">
@@ -192,7 +192,7 @@
 
                         <div class="space-y-1">
                             <label for="custPhone" class="block text-xs font-semibold text-slate-500">Phone Number *</label>
-                            <input type="tel" id="custPhone" required placeholder="+1 (555) 019-2834" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-200 bg-white focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-slate-800">
+                            <input type="tel" id="custPhone" maxlength="17" placeholder="+1 (555) 019-2834" class="w-full px-3 py-2 text-sm rounded-lg border border-slate-200 bg-white focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-slate-800" oninput="let v=this.value.replace(/\D/g,'').replace(/^1/,'').substring(0,10);this.value='+1'+(v?` (${v.slice(0,3)}`:'')+(v.length>3?`) ${v.slice(3,6)}`:'')+(v.length>6?`-${v.slice(6)}`:'');" required>
                         </div>
 
                         <div class="space-y-1">
